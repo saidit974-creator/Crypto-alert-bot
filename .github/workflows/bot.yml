@@ -1,9 +1,10 @@
-name: Crypto Telegram Alerts
+  name: Crypto Telegram Alerts
 
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: "3,8,13,18,23,28,33,38,43,48,53,58 * * * *"
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
@@ -25,8 +26,8 @@ jobs:
 
       - name: Save bot state
         run: |
-          git config user.name "crypto-alert-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add alerts.json state.json telegram_offset.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json telegram_offset.txt
           git diff --cached --quiet || git commit -m "Update bot state"
           git push
