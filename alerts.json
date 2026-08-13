@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": 1,
+    "symbol": "BTCUSDT",
+    "condition": "above",
+    "target": 63711.0,
+    "active": true
+  },
+  {
+    "id": 2,
+    "symbol": "BTCUSDT",
+    "condition": "above",
+    "target": 120000.0,
+    "active": true
+  },
+  {
+    "id": 3,
+    "symbol": "BTCUSDT",
+    "condition": "above",
+    "target": 120000.0,
+    "active": true
+  }
+]
