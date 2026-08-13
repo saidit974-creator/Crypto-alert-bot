@@ -10,7 +10,7 @@ BOT_TOKEN = os.environ["BOT_TOKEN"]
 ALLOWED_CHAT_ID = str(os.environ["ALLOWED_CHAT_ID"]).strip()
 
 TG = f"https://api.telegram.org/bot{BOT_TOKEN}"
-BINANCE = "https://api.binance.com/api/v3/ticker/price?symbol="
+BINANCE = "https://data-api.binance.vision/api/v3/ticker/price?symbol="
 
 def http_json(url, data=None, timeout=20):
     req = urllib.request.Request(url, data=data, method="POST" if data else "GET")
